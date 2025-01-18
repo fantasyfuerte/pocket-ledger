@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { IoMenuSharp } from "react-icons/io5";
 import Link from "next/link";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -26,15 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={` ${geistMono.variable} bg-backgroundPrimary`}>
         <nav className="flex justify-between p-5">
           <Link href="/">
-            <h1 className="text-lg">Pocket Ledger</h1>
+            <h1 className="text-lg text-primary font-extrabold">
+              Pocket Ledger
+            </h1>
           </Link>
           <button>
-            <IoMenuSharp size={30} />
+            <GiHamburgerMenu size={24} className="text-primary" />
           </button>
         </nav>
         {children}
