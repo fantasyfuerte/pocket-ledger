@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { IoMenuSharp } from "react-icons/io5";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +29,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav>
-          <h1>Pocket Ledger</h1>
-          <button></button>
+        <nav className="flex justify-between p-5">
+          <Link href="/">
+            <h1 className="text-lg">Pocket Ledger</h1>
+          </Link>
+          <button>
+            <IoMenuSharp size={30} />
+          </button>
         </nav>
         {children}
       </body>
