@@ -27,6 +27,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav>
+          <h1>Pocket Ledger</h1>
+          <button></button>
+        </nav>
         {children}
       </body>
     </html>
