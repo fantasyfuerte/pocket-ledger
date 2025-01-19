@@ -4,7 +4,7 @@ export enum TransactionType {
 }
 
 export interface Transaction {
-  id: number;
+  id: string;
   date: Date;
   description: string;
   amount: number;
@@ -12,7 +12,7 @@ export interface Transaction {
 
 export interface TransactionAction {
   type: TransactionType;
-  payload: Transaction | { id: number };
+  payload: Transaction | { id: Transaction["id"] };
 }
 
 export const initialState: Transaction[] = [];
