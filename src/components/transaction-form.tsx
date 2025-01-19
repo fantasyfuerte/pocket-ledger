@@ -2,7 +2,12 @@ import React from 'react'
 
 function TransactionForm() {
   return (
-    <div>TransactionForm</div>
+    <div>
+      <form>
+        <input type="text" />
+        <button>Add</button>
+      </form>
+    </div>
   )
 }
 
