@@ -14,9 +14,9 @@ function TransactionForm({ dispatch }: Props) {
     const amount = formData.get("amount");
 
     if (!description || !amount) return;
-    if (typeof amount !== "number") return;
 
-    const id = crypto.randomUUID();
+    const id = (Math.random() * 110 * Math.random()).toString();
+
     dispatch({
       type: TransactionType.ADD,
       payload: {
@@ -26,6 +26,10 @@ function TransactionForm({ dispatch }: Props) {
         amount: amount,
       },
     });
+    const inputText = e.currentTarget.elements.namedItem("description");
+    if (inputText instanceof HTMLInputElement) inputText.value = "";
+    const inputNumber = e.currentTarget.elements.namedItem("amount");
+    if (inputNumber instanceof HTMLInputElement) inputNumber.value = "";
   };
 
   return (
