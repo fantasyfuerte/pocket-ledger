@@ -1,3 +1,5 @@
+"use client";
+
 import { useReducer } from "react";
 import TransactionForm from "../../components/transaction-form";
 import { initialState, reduce } from "@/utils/services";
@@ -9,7 +11,7 @@ function TrackerApp() {
 
   return (
     <div>
-      <TransactionForm />
+      <TransactionForm dispatch={dispatch} />
       {state.map((transaction) => (
         <div key={transaction.id}>
           {transaction.description}
