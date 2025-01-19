@@ -1,7 +1,11 @@
+import TransitionPage from "@/components/transition-page";
+
 function TrackingPage() {
   return (
-    <div>TrackingPage</div>
-  )
+    <div>
+      <TransitionPage />
+    </div>
+  );
 }
 
-export default TrackingPage
+export default TrackingPage;
