@@ -1,8 +1,10 @@
+import TransitionPage from "@/components/transition-page";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
+      <TransitionPage />
       <section className="flex flex-col items-center justify-center p-5 h-[85vh] gap-7 bg-gradient-principal">
         <h2 className="text-3xl font-semibold text-center text-primary">
           Track Your Finances with Ease, Empower Your Future.
