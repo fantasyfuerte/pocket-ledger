@@ -1,9 +1,11 @@
 import TransitionPage from "@/components/transition-page";
+import TrackerApp from "./tracker";
 
 function TrackingPage() {
   return (
-    <div>
+    <div className="bg-backgroundPrimary h-screen">
       <TransitionPage />
+      <TrackerApp />
     </div>
   );
 }
