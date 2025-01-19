@@ -29,7 +29,10 @@ export default function RootLayout({
             </h1>
           </Link>
           <button>
-            <GiHamburgerMenu size={24} className="text-primary" />
+            <GiHamburgerMenu
+              size={24}
+              className="text-primary hover:text-middleColor"
+            />
           </button>
         </nav>
         {children}
