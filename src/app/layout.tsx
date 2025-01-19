@@ -24,14 +24,14 @@ export default function RootLayout({
       <body className={`${geistMono.variable} `}>
         <nav className="flex justify-between p-3 bg-backgroundPrimary">
           <Link href="/">
-            <h1 className="text-lg text-primary font-extrabold">
+            <h1 className="text-lg text-primary font-extrabold hover:text-primary/45">
               Pocket Ledger
             </h1>
           </Link>
           <button>
             <GiHamburgerMenu
               size={24}
-              className="text-primary hover:text-middleColor"
+              className="text-primary hover:text-primary/45"
             />
           </button>
         </nav>
