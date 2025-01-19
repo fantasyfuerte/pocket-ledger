@@ -1,9 +1,11 @@
-import React from 'react'
+import TransactionForm from "../../components/transaction-form";
 
 function TrackerApp() {
   return (
-    <div>TrackerApp</div>
-  )
+    <div>
+      <TransactionForm />
+    </div>
+  );
 }
 
-export default TrackerApp
+export default TrackerApp;
