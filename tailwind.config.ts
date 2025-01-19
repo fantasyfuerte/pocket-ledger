@@ -12,8 +12,12 @@ export default {
         primary: "#352640",
         backgroundPrimary: "#f1f2ce",
         backgroundSecondary: "#d1b4a2",
-        cta: "##92394b",
+        cta: "#92394b",
         middleColor: "#a9767a",
+      },
+      backgroundImage: {
+        "gradient-principal":
+          "linear-gradient(to bottom, #f1f2ce 60%, #a9767a)",
       },
     },
   },
