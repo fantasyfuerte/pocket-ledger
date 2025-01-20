@@ -15,7 +15,7 @@ export interface TransactionAction {
   payload: Transaction | { id: Transaction["id"] };
 }
 
-export const initialState: Transaction[] = [];
+export const initialState = [];
 
 export const reduce = (state: Transaction[], action: TransactionAction) => {
   switch (action.type) {
