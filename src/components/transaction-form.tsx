@@ -13,7 +13,7 @@ function TransactionForm({ dispatch }: Props) {
     let description = formData.get("description")?.toString();
     const amount = formData.get("amount");
 
-    if (!amount) return;
+    if (!amount || isNaN(Number(amount))) return;
     if (!description)
       description = `day ${new Date().getDate()}-${
         new Date().getMonth() + 1
@@ -27,7 +27,7 @@ function TransactionForm({ dispatch }: Props) {
         id: id,
         date: new Date(),
         description: description,
-        amount: amount,
+        amount: Number(amount),
       },
     });
     const inputText = e.currentTarget.elements.namedItem("description");
@@ -40,22 +40,22 @@ function TransactionForm({ dispatch }: Props) {
     <div className="">
       <form
         onSubmit={handleForm}
-        className="flex flex-col items-center gap-2 bg-backgroundSecondary rounded-xl p-2"
+        className="flex flex-col gap-2 bg-backgroundSecondary rounded-xl p-4"
       >
         <input
-          className="bg-transparent p-2 outline-none"
+          className="p-2 outline-none text-center bg-backgroundPrimary/80 rounded-md text-primary font-semibold"
           type="number"
           name="amount"
           placeholder="Amount"
           required
         />
         <input
-          className="bg-transparent p-2 outline-none"
+          className="bg-backgroundPrimary/80 p-2 outline-none text-center rounded-md text-primary font-semibold "
           type="text"
           name="description"
           placeholder="Description"
         />
-        <button className="bg-cta w-fit px-4 py-2 rounded-full text-backgroundPrimary font-semibold active:bg-cta/60">
+        <button className="bg-cta w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 self-center">
           Add
         </button>
       </form>
