@@ -40,17 +40,17 @@ function TransactionForm({ dispatch }: Props) {
     <div className="">
       <form
         onSubmit={handleForm}
-        className="flex flex-col gap-2 bg-backgroundSecondary rounded-xl p-4"
+        className="flex flex-col gap-2 bg-middleColor/80 rounded-xl p-4"
       >
         <input
-          className="p-2 outline-none text-center bg-backgroundPrimary/80 rounded-md text-primary font-semibold"
+          className="p-2 outline-none text-center bg-backgroundSecondary/80 rounded-md text-primary font-semibold placeholder:text-primary/80"
           type="number"
           name="amount"
           placeholder="Amount"
           required
         />
         <input
-          className="bg-backgroundPrimary/80 p-2 outline-none text-center rounded-md text-primary font-semibold "
+          className="bg-backgroundSecondary/80 p-2 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/80"
           type="text"
           name="description"
           placeholder="Description"
