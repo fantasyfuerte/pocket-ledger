@@ -7,7 +7,10 @@ interface Props {
 }
 function TransactionHistory({ state, dispatch }: Props) {
   return (
-    <article>
+    <article className="bg-middleColor p-1 rounded-xl">
+      <h4 className="text-primary font-semibold text-center">
+        Transaction History
+      </h4>
       <ul>
         {state.map((transaction) => (
           <TransactionItem

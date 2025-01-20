@@ -9,7 +9,7 @@ function TrackerApp() {
   const [state, dispatch] = useReducer(reduce, initialState);
 
   return (
-    <section>
+    <section className="flex flex-col gap-2">
       <TransactionForm dispatch={dispatch} />
       <TransactionHistory state={state} dispatch={dispatch} />
     </section>
