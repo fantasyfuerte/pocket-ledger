@@ -15,9 +15,7 @@ function TransactionForm({ dispatch }: Props) {
 
     if (!amount || isNaN(Number(amount))) return;
     if (!description)
-      description = `day ${new Date().getDate()}-${
-        new Date().getMonth() + 1
-      } transaction`;
+      description = `My "${new Date().toLocaleDateString()}" transaction`;
 
     const id = (Math.random() * 110 * Math.random()).toString();
 
