@@ -3,7 +3,7 @@ import TrackerApp from "./tracker";
 
 function TrackingPage() {
   return (
-    <div className="bg-backgroundPrimary h-screen">
+    <div className="bg-backgroundPrimary h-screen p-3">
       <TransitionPage />
       <TrackerApp />
     </div>
