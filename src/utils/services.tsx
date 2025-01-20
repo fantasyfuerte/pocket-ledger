@@ -23,7 +23,7 @@ export const reduce = (state: Transaction[], action: TransactionAction) => {
       return [...state, action.payload as Transaction];
     case TransactionType.REMOVE:
       return state.filter(
-        (transaction) => transaction.id! == action.payload.id
+        (transaction) => transaction.id !== action.payload.id
       );
   }
 };
