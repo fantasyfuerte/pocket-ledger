@@ -3,21 +3,16 @@
 import { useReducer } from "react";
 import TransactionForm from "../../components/transaction-form";
 import { initialState, reduce } from "@/utils/services";
-
+import TransactionHistory from "@/components/transaction-history";
 
 function TrackerApp() {
-
   const [state, dispatch] = useReducer(reduce, initialState);
 
   return (
-    <div>
+    <section>
       <TransactionForm dispatch={dispatch} />
-      {state.map((transaction) => (
-        <div key={transaction.id}>
-          {transaction.description}
-        </div>
-      ))}
-    </div>
+      <TransactionHistory state={state} dispatch={dispatch} />
+    </section>
   );
 }
 

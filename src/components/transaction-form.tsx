@@ -37,7 +37,7 @@ function TransactionForm({ dispatch }: Props) {
   };
 
   return (
-    <div className="">
+    <article>
       <form
         onSubmit={handleForm}
         className="flex flex-col gap-2 bg-middleColor/80 rounded-xl p-4"
@@ -59,7 +59,7 @@ function TransactionForm({ dispatch }: Props) {
           Add
         </button>
       </form>
-    </div>
+    </article>
   );
 }
 
