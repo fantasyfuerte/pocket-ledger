@@ -20,16 +20,12 @@ function TransactionItem({ transaction, dispatch }: Props) {
   return (
     <li key={transaction.id} className="bg-backgroundSecondary m-2">
       <div className="flex flex-col gap-2">
-        <div className="flex gap-2">
-          <p className="text-primary font-semibold">
-            {transaction.date.toLocaleDateString()}
-          </p>
-          <p className="text-primary font-semibold">
-            {transaction.description}
-          </p>
-        </div>
-        <p className="text-primary font-semibold">${transaction.amount}</p>
+        <p className="text-primary font-semibold">
+          {transaction.date.toLocaleDateString()}
+        </p>
+        <p className="text-primary font-semibold">{transaction.description}</p>
       </div>
+      <p className="text-primary font-semibold text-lg">${transaction.amount}</p>
       <button
         onClick={() => handleClick(transaction.id)}
         className="bg-cta px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 self-center m-2"
