@@ -7,8 +7,9 @@ import TransactionHistory from "@/components/transaction-history";
 
 function TrackerApp() {
   const [state, dispatch] = useReducer(reduce, initialState);
+
   useEffect(() => {
-    alert("Hello World");
+    window.localStorage.setItem("transactions", JSON.stringify(state));
   }, [state]);
 
   return (
