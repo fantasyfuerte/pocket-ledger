@@ -15,7 +15,9 @@ export interface TransactionAction {
   payload: Transaction | { id: Transaction["id"] };
 }
 
-export const initialState = [];
+export const initialState = window.localStorage.getItem("transactions")
+  ? JSON.parse(window.localStorage.getItem("transactions")!)
+  : [];
 
 export const reduce = (state: Transaction[], action: TransactionAction) => {
   switch (action.type) {
