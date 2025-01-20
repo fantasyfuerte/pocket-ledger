@@ -10,10 +10,14 @@ function TransactionForm({ dispatch }: Props) {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
-    const description = formData.get("description")?.toString();
+    let description = formData.get("description")?.toString();
     const amount = formData.get("amount");
 
-    if (!description || !amount) return;
+    if (!amount) return;
+    if (!description)
+      description = `day ${new Date().getDate()}-${
+        new Date().getMonth() + 1
+      } transaction`;
 
     const id = (Math.random() * 110 * Math.random()).toString();
 
@@ -33,16 +37,27 @@ function TransactionForm({ dispatch }: Props) {
   };
 
   return (
-    <div>
-      <form onSubmit={handleForm}>
+    <div className="">
+      <form
+        onSubmit={handleForm}
+        className="flex flex-col items-center gap-2 bg-backgroundSecondary rounded-xl p-2"
+      >
         <input
+          className="bg-transparent p-2 outline-none"
+          type="number"
+          name="amount"
+          placeholder="Amount"
+          required
+        />
+        <input
+          className="bg-transparent p-2 outline-none"
           type="text"
           name="description"
           placeholder="Description"
-          required
         />
-        <input type="number" name="amount" placeholder="Amount" required />
-        <button>Add</button>
+        <button className="bg-cta w-fit px-4 py-2 rounded-full text-backgroundPrimary font-semibold active:bg-cta/60">
+          Add
+        </button>
       </form>
     </div>
   );
