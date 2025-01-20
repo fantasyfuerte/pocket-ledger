@@ -2,14 +2,14 @@
 
 import { useReducer, useEffect } from "react";
 import TransactionForm from "../../components/transaction-form";
-import { initialState, reduce } from "@/utils/services";
+import { initialState, reduce, saveData } from "@/utils/services";
 import TransactionHistory from "@/components/transaction-history";
 
 function TrackerApp() {
   const [state, dispatch] = useReducer(reduce, initialState);
 
   useEffect(() => {
-    window.localStorage.setItem("transactions", JSON.stringify(state));
+    if (state.length > 0) saveData("transactions", JSON.stringify(state));
   }, [state]);
 
   return (

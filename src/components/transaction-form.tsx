@@ -23,7 +23,7 @@ function TransactionForm({ dispatch }: Props) {
       type: TransactionType.ADD,
       payload: {
         id: id,
-        date: new Date(),
+        date: new Date().toLocaleString(),
         description: description,
         amount: Number(amount),
       },

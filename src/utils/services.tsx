@@ -5,13 +5,13 @@ export enum TransactionType {
 
 export interface Transaction {
   id: string;
-  date: Date;
+  date: string;
   description: string;
   amount: number;
 }
 
 export const getData = (key: string) => {
-  let initial;
+  let initial = [];
   const data = window.localStorage.getItem(`${key}`);
   if (data) {
     initial = JSON.parse(data);
@@ -28,9 +28,7 @@ export interface TransactionAction {
   payload: Transaction | { id: Transaction["id"] };
 }
 
-export const initialState = window.localStorage.getItem("transactions")
-  ? JSON.parse(window.localStorage.getItem("transactions")!)
-  : [];
+export const initialState = getData("transactions");
 
 export const reduce = (state: Transaction[], action: TransactionAction) => {
   switch (action.type) {
