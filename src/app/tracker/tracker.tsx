@@ -9,7 +9,7 @@ function TrackerApp() {
   const [state, dispatch] = useReducer(reduce, initialState);
 
   useEffect(() => {
-    if (state.length > 0) saveData("transactions", JSON.stringify(state));
+    saveData("transactions", JSON.stringify(state));
   }, [state]);
 
   return (

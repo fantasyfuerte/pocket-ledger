@@ -12,7 +12,7 @@ export interface Transaction {
 
 export const getData = (key: string) => {
   let initial = [];
-  const data = window.localStorage.getItem(`${key}`);
+  const data = window.localStorage.getItem(key);
   if (data) {
     initial = JSON.parse(data);
   }
