@@ -43,17 +43,17 @@ function TransactionForm({ dispatch }: Props) {
     <article>
       <form
         onSubmit={handleForm}
-        className="flex flex-col gap-2 bg-middleColor/80 rounded-xl p-4"
+        className="flex flex-col gap-2 bg-backgroundSecondary rounded-xl p-4"
       >
         <input
-          className="text-2xl p-3 outline-none text-center bg-backgroundSecondary/80 rounded-md text-primary font-semibold placeholder:text-primary/50"
+          className="bg-middleColor/25 text-2xl p-3 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/50"
           type="number"
           name="amount"
           placeholder="-$35"
           required
         />
         <input
-          className="bg-backgroundSecondary/80 p-2 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/50"
+          className="bg-middleColor/25 p-2 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/50"
           type="text"
           name="description"
           placeholder="Booking a flight"
