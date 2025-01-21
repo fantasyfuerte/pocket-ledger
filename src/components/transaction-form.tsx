@@ -1,5 +1,4 @@
 import { TransactionAction, TransactionType } from "@/utils/services";
-import React from "react";
 
 interface Props {
   dispatch: (action: TransactionAction) => void;
