@@ -1,5 +1,6 @@
 import { Transaction, TransactionAction } from "@/utils/services";
 import TransactionItem from "./transaction-item";
+import { GiClockwork } from "react-icons/gi";
 
 interface Props {
   state: Transaction[];
@@ -7,9 +8,9 @@ interface Props {
 }
 function TransactionHistory({ state, dispatch }: Props) {
   return (
-    <article className="bg-middleColor p-1 rounded-xl">
-      <h4 className="text-primary font-semibold text-center">
-        Transaction History
+    <article className="bg-backgroundSecondary p-2 rounded-xl">
+      <h4 className="text-primary/80 font-semibold text-center flex gap-1">
+        <GiClockwork size={24} /> History
       </h4>
       <ul>
         {state.map((transaction) => (
