@@ -21,9 +21,9 @@ function TransactionItem({ transaction, dispatch }: Props) {
   return (
     <li
       key={transaction.id}
-      className="flex justify-between bg-middleColor rounded-xl py-2 px-3 active:bg-middleColor/60"
+      className="flex justify-between bg-middleColor rounded-xl p-2"
     >
-      <div className="flex flex-col">
+      <div className="flex items-center gap-2">
         <p
           className={`font-bold text-lg ${
             transaction.amount > 0 ? "text-primary" : "text-cta"
