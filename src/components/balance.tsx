@@ -7,7 +7,6 @@ interface Props {
 
 function Balance({ data }: Props) {
   const { incomes, expenses } = data;
-  console.log(incomes, expenses);
 
   return (
     <div className="grid grid-cols-2 gap-2 bg-backgroundSecondary rounded-xl p-4">
