@@ -10,6 +10,7 @@ interface Props {
 function PieChart({ data }: Props) {
   const incomes = data.incomes;
   const expenses = data.expenses * -1;
+  const balance = incomes + expenses;
 
   return (
     <article className="bg-backgroundSecondary rounded-xl p-4">
@@ -21,8 +22,8 @@ function PieChart({ data }: Props) {
         animate={{ duration: 1000 }}
         colorScale={["#92394b", "#352640"]}
         data={[
-          { x: "Incomes", y: incomes },
-          { x: "Expenses", y: expenses },
+          { x: "expenses", y: expenses },
+          { x: "balance", y: balance },
         ]}
       />
     </article>
