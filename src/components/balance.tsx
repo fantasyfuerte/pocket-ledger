@@ -14,7 +14,7 @@ function Balance({ state }: Props) {
             if (curr.amount > 0) {
               return acc + curr.amount;
             }
-            return 0;
+            return acc;
           }, 0)}
         </p>
       </div>
