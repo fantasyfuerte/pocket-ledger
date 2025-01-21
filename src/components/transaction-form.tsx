@@ -34,6 +34,14 @@ function TransactionForm({ dispatch }: Props) {
     if (inputNumber instanceof HTMLInputElement) inputNumber.value = "";
   };
 
+  const clearForm = (e: React.FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const inputText = e.currentTarget.form?.elements.namedItem("description");
+    if (inputText instanceof HTMLInputElement) inputText.value = "";
+    const inputNumber = e.currentTarget.form?.elements.namedItem("amount");
+    if (inputNumber instanceof HTMLInputElement) inputNumber.value = "";
+  };
+
   return (
     <article>
       <form
@@ -53,9 +61,21 @@ function TransactionForm({ dispatch }: Props) {
           name="description"
           placeholder="Description"
         />
-        <button className="bg-cta w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 self-center">
-          Add
-        </button>
+        <div className="flex gap-2 justify-center">
+          <button
+            type="submit"
+            className="bg-cta w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 self-center"
+          >
+            Add
+          </button>
+          <button
+            type="button"
+            onClick={clearForm}
+            className="bg-primary w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 self-center"
+          >
+            Clear
+          </button>
+        </div>
       </form>
     </article>
   );
