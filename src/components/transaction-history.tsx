@@ -8,11 +8,11 @@ interface Props {
 }
 function TransactionHistory({ state, dispatch }: Props) {
   return (
-    <article className="bg-backgroundSecondary p-3 rounded-xl md:col-span-3">
-      <h4 className="text-primary/80 font-semibold text-center flex gap-1">
+    <article className="bg-backgroundSecondary rounded-xl md:col-span-3 px-3">
+      <h4 className="text-primary/80 font-semibold flex gap-1 py-3">
         <GiClockwork size={24} /> History
       </h4>
-      <ul>
+      <ul className="flex flex-col gap-2">
         {state.map((transaction) => (
           <TransactionItem
             key={transaction.id}
