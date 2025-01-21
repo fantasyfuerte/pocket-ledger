@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistMono.variable} `}>
+      <body className={`${geistMono.variable}`}>
         <nav className="flex justify-between p-3 bg-backgroundPrimary">
           <Link href="/">
             <h1 className="text-lg text-primary font-extrabold active:text-primary/45">
