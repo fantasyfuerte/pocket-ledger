@@ -48,17 +48,17 @@ function TransactionForm({ dispatch }: Props) {
         className="flex flex-col gap-2 bg-middleColor/80 rounded-xl p-4"
       >
         <input
-          className="p-2 outline-none text-center bg-backgroundSecondary/80 rounded-md text-primary font-semibold placeholder:text-primary/80"
+          className="text-2xl p-3 outline-none text-center bg-backgroundSecondary/80 rounded-md text-primary font-semibold placeholder:text-primary/50"
           type="number"
           name="amount"
-          placeholder="Amount"
+          placeholder="-$35"
           required
         />
         <input
-          className="bg-backgroundSecondary/80 p-2 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/80"
+          className="bg-backgroundSecondary/80 p-2 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/50"
           type="text"
           name="description"
-          placeholder="Description"
+          placeholder="Booking a flight"
         />
         <div className="flex gap-2">
           <button
