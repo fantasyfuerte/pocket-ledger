@@ -60,12 +60,12 @@ function TransactionForm({ dispatch }: Props) {
           name="description"
           placeholder="Description"
         />
-        <div className="flex gap-2 justify-center">
+        <div className="flex gap-2">
           <button
             type="submit"
-            className="bg-cta w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 self-center"
+            className="bg-cta w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 flex-grow"
           >
-            Add
+            Add Transaction
           </button>
           <button
             type="button"
