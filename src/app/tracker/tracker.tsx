@@ -23,7 +23,7 @@ function TrackerApp() {
 
   const expenses = state.reduce((acc, curr) => {
     if (curr.amount < 0) {
-      return (acc + curr.amount) * -1;
+      return acc + curr.amount;
     }
     return acc;
   }, 0);
@@ -32,7 +32,7 @@ function TrackerApp() {
     <section className="flex flex-col gap-2">
       <TransactionForm dispatch={dispatch} />
       <Balance data={{ incomes, expenses }} />
-      <PieChart />
+      <PieChart data={{ incomes, expenses }} />
       <TransactionHistory state={state} dispatch={dispatch} />
     </section>
   );
