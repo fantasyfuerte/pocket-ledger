@@ -12,16 +12,19 @@ function PieChart({ data }: Props) {
   const expenses = data.expenses * -1;
 
   return (
-    <VictoryPie
-      innerRadius={100}
-      padAngle={5}
-      cornerRadius={10}
-      labels={[]}
-      data={[
-        { x: "Incomes", y: incomes },
-        { x: "Expenses", y: expenses },
-      ]}
-    />
+    <article className="bg-backgroundSecondary rounded-xl p-4">
+      <VictoryPie
+        innerRadius={100}
+        padAngle={5}
+        cornerRadius={10}
+        labels={[]}
+        animate={{ duration: 1000 }}
+        data={[
+          { x: "Incomes", y: incomes },
+          { x: "Expenses", y: expenses },
+        ]}
+      />
+    </article>
   );
 }
 
