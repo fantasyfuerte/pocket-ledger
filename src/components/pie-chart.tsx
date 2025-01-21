@@ -10,7 +10,7 @@ interface Props {
 function PieChart({ data }: Props) {
   const incomes = data.incomes;
   const expenses = data.expenses * -1;
-  const balance = incomes + expenses;
+  const balance = incomes - expenses;
 
   return (
     <article className="bg-backgroundSecondary rounded-xl p-4">
