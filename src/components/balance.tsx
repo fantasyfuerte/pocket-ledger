@@ -21,7 +21,12 @@ function Balance({ state }: Props) {
       <div className="flex flex-col gap-2 items-center">
         <h2 className="text-xl font-bold">Expenses</h2>
         <p className="text-2xl font-bold">
-          {state.reduce((acc, curr) => acc + curr.amount, 0)}
+          {state.reduce((acc, curr) => {
+            if (curr.amount < 0) {
+              return acc + curr.amount;
+            }
+            return acc;
+          }, 0)}
         </p>
       </div>
       <div className="flex flex-col items-center gap-2 col-span-2">
