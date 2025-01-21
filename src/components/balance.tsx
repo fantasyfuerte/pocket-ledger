@@ -9,7 +9,7 @@ function Balance({ data }: Props) {
   const { incomes, expenses } = data;
 
   return (
-    <div className="grid grid-cols-2 gap-2 bg-backgroundSecondary rounded-xl p-4">
+    <div className="grid grid-cols-2 gap-2 bg-backgroundSecondary rounded-xl p-2">
       <div className="flex flex-col gap-2 items-center bg-middleColor rounded-xl p-2 text-backgroundPrimary">
         <h2 className="text-xl font-bold">Incomes</h2>
         <p className="text-2xl font-bold">{incomes}</p>
