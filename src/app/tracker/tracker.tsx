@@ -16,8 +16,8 @@ function TrackerApp() {
   return (
     <section className="flex flex-col gap-2">
       <TransactionForm dispatch={dispatch} />
-      <TransactionHistory state={state} dispatch={dispatch} />
       <Balance state={state} />
+      <TransactionHistory state={state} dispatch={dispatch} />
     </section>
   );
 }
