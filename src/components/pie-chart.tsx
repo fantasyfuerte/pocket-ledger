@@ -17,7 +17,7 @@ function PieChart({ data }: Props) {
       <VictoryPie
         innerRadius={100}
         padAngle={5}
-        cornerRadius={10}
+        cornerRadius={15}
         labels={[]}
         animate={{ duration: 1000 }}
         colorScale={["#92394b", "#352640"]}
