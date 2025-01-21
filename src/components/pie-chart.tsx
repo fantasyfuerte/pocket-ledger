@@ -16,6 +16,7 @@ function PieChart({ data }: Props) {
       innerRadius={100}
       padAngle={5}
       cornerRadius={10}
+      labels={[]}
       data={[
         { x: "Incomes", y: incomes },
         { x: "Expenses", y: expenses },
