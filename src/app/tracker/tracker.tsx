@@ -14,10 +14,24 @@ function TrackerApp() {
     saveData("transactions", JSON.stringify(state));
   }, [state]);
 
+  const incomes = state.reduce((acc, curr) => {
+    if (curr.amount > 0) {
+      return acc + curr.amount;
+    }
+    return acc;
+  }, 0);
+
+  const expenses = state.reduce((acc, curr) => {
+    if (curr.amount < 0) {
+      return (acc + curr.amount) * -1;
+    }
+    return acc;
+  }, 0);
+
   return (
     <section className="flex flex-col gap-2">
       <TransactionForm dispatch={dispatch} />
-      <Balance state={state} />
+      <Balance data={{ incomes, expenses }} />
       <PieChart />
       <TransactionHistory state={state} dispatch={dispatch} />
     </section>
