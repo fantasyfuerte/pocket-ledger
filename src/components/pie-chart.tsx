@@ -13,7 +13,7 @@ function PieChart({ data }: Props) {
   const balance = incomes - expenses;
 
   return (
-    <article className="bg-backgroundSecondary rounded-xl p-4">
+    <article className="bg-backgroundSecondary rounded-xl p-4 active:bg-middleColor">
       <VictoryPie
         innerRadius={100}
         padAngle={5}
