@@ -19,6 +19,7 @@ function PieChart({ data }: Props) {
         cornerRadius={10}
         labels={[]}
         animate={{ duration: 1000 }}
+        colorScale={["#92394b", "#352640"]}
         data={[
           { x: "Incomes", y: incomes },
           { x: "Expenses", y: expenses },
