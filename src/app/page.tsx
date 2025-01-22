@@ -17,7 +17,7 @@ export default function Home() {
           Get Started
         </Link>
       </section>
-      <section className="flex flex-col items-center justify-center pt-4 p-3 h-screen gap-7 bg-middleColor">
+      <section id="how-to-use" className="flex flex-col items-center justify-center pt-4 p-3 h-screen gap-7 bg-middleColor">
         <h4 className="text-primary font-semibold text-xl">How to use</h4>
         <div className="text-center text-primary/80 flex flex-col gap-3 text-lg">
           <p>Add your incomes and expenses to track your finances</p>
@@ -28,7 +28,7 @@ export default function Home() {
           <p>So now...</p>
           <Link
             href="tracker"
-            className="bg-cta font-semibold text-backgroundPrimary px-4 py-2 rounded-3xl text-lg active:bg-cta/65 w-fit self-center shadow-xl shadow-backgroundPrimary/45"
+            className="bg-cta font-semibold text-backgroundPrimary px-4 py-2 rounded-3xl text-lg active:bg-cta/65 w-fit self-center shadow-xl shadow-backgroundPrimary/45 mt-2"
           >
             Get Started
           </Link>

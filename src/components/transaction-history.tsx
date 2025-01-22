@@ -10,7 +10,7 @@ function TransactionHistory({ state, dispatch }: Props) {
   return (
     <article className="bg-backgroundSecondary rounded-xl md:col-span-3 px-3 pb-4">
       <h4 className="text-primary/80 font-semibold flex gap-1 py-3">
-        <GiClockwork size={24} /> History
+        <GiClockwork size={24} id="history" /> History
       </h4>
       <ul className="flex flex-col gap-2">
         {state.map((transaction) => (
