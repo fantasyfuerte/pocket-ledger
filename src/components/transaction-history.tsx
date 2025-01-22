@@ -20,6 +20,9 @@ function TransactionHistory({ state, dispatch }: Props) {
             dispatch={dispatch}
           />
         ))}
+        {state.length === 0 && (
+          <li className="text-primary/80 font-semibold">No transactions yet</li>
+        )}
       </ul>
     </article>
   );
