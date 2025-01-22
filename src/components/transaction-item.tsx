@@ -1,8 +1,11 @@
+"use client";
+
 import {
   Transaction,
   TransactionAction,
   TransactionType,
 } from "@/utils/services";
+import { useState } from "react";
 import { GiTrashCan } from "react-icons/gi";
 
 interface Props {
@@ -18,6 +21,8 @@ function TransactionItem({ transaction, dispatch }: Props) {
     });
   };
 
+  const [detailsVisible, setDetailsVisible] = useState(false);
+
   return (
     <li
       key={transaction.id}
@@ -32,7 +37,8 @@ function TransactionItem({ transaction, dispatch }: Props) {
           {transaction.amount < 0 && "-"}${Math.abs(transaction.amount)}
         </p>
         <p className="text-primary/80 font-semibold">
-          {transaction.description.slice(0, 20)}...
+          {transaction.description.slice(0, 20)}
+          {!detailsVisible && "..."}
         </p>
       </div>
       <button
