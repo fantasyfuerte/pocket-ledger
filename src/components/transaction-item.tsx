@@ -1,8 +1,11 @@
+"use client";
+
 import {
   Transaction,
   TransactionAction,
   TransactionType,
 } from "@/utils/services";
+import { useState } from "react";
 import { GiTrashCan } from "react-icons/gi";
 
 interface Props {
@@ -18,27 +21,42 @@ function TransactionItem({ transaction, dispatch }: Props) {
     });
   };
 
+  const [detailsVisible, setDetailsVisible] = useState(false);
+
   return (
     <li
       key={transaction.id}
-      className="flex justify-between bg-middleColor rounded-xl p-2"
+      onClick={() => setDetailsVisible(!detailsVisible)}
+      className=" bg-middleColor rounded-xl  active:bg-middleColor/60 hover:bg-middleColor/70 p-2"
     >
-      <div className="flex items-center gap-2">
-        <p
-          className={`font-bold text-lg ${
-            transaction.amount > 0 ? "text-primary" : "text-cta"
-          }`}
+      <div className="flex justify-between">
+        <div className="flex items-center gap-2">
+          <p
+            className={`font-bold text-lg ${
+              transaction.amount > 0 ? "text-primary" : "text-cta"
+            }`}
+          >
+            {transaction.amount < 0 && "-"}${Math.abs(transaction.amount)}
+          </p>
+          <p className="text-primary/80 font-semibold">
+            {detailsVisible
+              ? transaction.description
+              : transaction.description.slice(0, 20)}
+            {!detailsVisible && "..."}
+          </p>
+        </div>
+        <button
+          onClick={() => handleClick(transaction.id)}
+          className="text-cta active:text-cta/70 font-semibold active:bg-cta/60 self-center"
         >
-          {transaction.amount < 0 && "-"}${Math.abs(transaction.amount)}
-        </p>
-        <p className="text-primary/80">{transaction.date}</p>
+          <GiTrashCan size={30} />
+        </button>
       </div>
-      <button
-        onClick={() => handleClick(transaction.id)}
-        className="text-cta active:text-cta/70 font-semibold active:bg-cta/60 self-center"
-      >
-        <GiTrashCan size={30} />
-      </button>
+      {detailsVisible && (
+        <div className="h-10 flex justify-center items-center">
+          <p className="text-primary/80 font-semibold">{transaction.date}</p>
+        </div>
+      )}
     </li>
   );
 }
