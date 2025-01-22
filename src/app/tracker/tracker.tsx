@@ -2,13 +2,15 @@
 
 import { useReducer, useEffect } from "react";
 import TransactionForm from "../../components/transaction-form";
-import { initialState, reduce, saveData } from "@/utils/services";
+import { reduce, saveData,getData } from "@/utils/services";
 import TransactionHistory from "@/components/transaction-history";
 import Balance from "@/components/balance";
 import PieChart from "@/components/pie-chart";
 import Footer from "@/components/footer";
 
 function TrackerApp() {
+  const initialState = getData("transactions");
+
   const [state, dispatch] = useReducer(reduce, initialState);
 
   useEffect(() => {

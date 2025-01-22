@@ -1,5 +1,3 @@
-"use client"
-
 export enum TransactionType {
   ADD = "ADD",
   REMOVE = "REMOVE",
@@ -29,8 +27,6 @@ export interface TransactionAction {
   type: TransactionType;
   payload: Transaction | { id: Transaction["id"] };
 }
-
-export const initialState = getData("transactions");
 
 export const reduce = (state: Transaction[], action: TransactionAction) => {
   switch (action.type) {
