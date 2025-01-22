@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
+import DropDownButton from "@/components/dropdown-button";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -28,12 +28,7 @@ export default function RootLayout({
               Pocket Ledger
             </h1>
           </Link>
-          <button>
-            <GiHamburgerMenu
-              size={24}
-              className="text-primary active:text-primary/45"
-            />
-          </button>
+          <DropDownButton />
         </nav>
         {children}
       </body>
