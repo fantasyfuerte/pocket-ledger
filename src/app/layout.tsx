@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Link from 'next/link'
+import Link from "next/link";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,7 +24,6 @@ export default function RootLayout({
       <body className={`${geistMono.variable}`}>
         <nav className="flex justify-between p-3 bg-backgroundPrimary">
           <Link href="/">
-            {/* Link doesn't work in this case */}
             <h1 className="text-lg text-primary font-extrabold active:text-primary/45">
               Pocket Ledger
             </h1>
