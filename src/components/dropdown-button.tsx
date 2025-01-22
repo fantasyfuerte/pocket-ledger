@@ -42,8 +42,8 @@ function DropDownButton() {
               </a>
             </li>
             <li>
-              <a href="#" className="block px-4 py-2">
-                Earnings
+              <a href="https://instagram.com/fuerte.ts" className="block px-4 py-2">
+                Contact
               </a>
             </li>
           </ul>
