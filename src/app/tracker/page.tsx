@@ -3,9 +3,9 @@ import TrackerApp from "./tracker";
 
 function TrackingPage() {
   return (
-    <div className="bg-backgroundPrimary px-3">
+    <div className="bg-backgroundPrimary px-3 pb-10">
       <TransitionPage />
-      <TrackerApp />¡
+      <TrackerApp />
     </div>
   );
 }
