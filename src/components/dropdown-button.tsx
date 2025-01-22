@@ -7,8 +7,13 @@ function DropDownButton() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col items-end">
-      <button className="outline-none" onClick={() => setIsOpen((prev) => !prev)}>
+    <div className="flex flex-col items-end absolute top-0 right-0 m-4">
+      <button
+        className="outline-none"
+        onClick={() => {
+          setIsOpen((prev) => !prev);
+        }}
+      >
         <GiHamburgerMenu
           size={24}
           className="text-primary active:text-primary/45"
@@ -24,7 +29,10 @@ function DropDownButton() {
             aria-labelledby="dropdownDefaultButton"
           >
             <li>
-              <a href="https://pocket-ledger.vercel.app/#how-to-use" className="block px-4 py-2">
+              <a
+                href="https://pocket-ledger.vercel.app/#how-to-use"
+                className="block px-4 py-2"
+              >
                 How to use
               </a>
             </li>
