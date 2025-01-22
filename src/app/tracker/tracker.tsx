@@ -2,13 +2,26 @@
 
 import { useReducer, useEffect } from "react";
 import TransactionForm from "../../components/transaction-form";
-import { reduce, saveData,getData } from "@/utils/services";
+import { reduce } from "@/utils/services";
 import TransactionHistory from "@/components/transaction-history";
 import Balance from "@/components/balance";
 import PieChart from "@/components/pie-chart";
 import Footer from "@/components/footer";
 
 function TrackerApp() {
+  const getData = (key: string) => {
+    let initial = [];
+    const data = localStorage.getItem(key);
+    if (data) {
+      initial = JSON.parse(data);
+    }
+    return initial;
+  };
+
+  const saveData = (key: string, content: string) => {
+    localStorage.setItem(key, content);
+  };
+
   const initialState = getData("transactions");
 
   const [state, dispatch] = useReducer(reduce, initialState);

@@ -10,19 +10,6 @@ export interface Transaction {
   amount: number;
 }
 
-export const getData = (key: string) => {
-  let initial = [];
-  const data = window.localStorage.getItem(key);
-  if (data) {
-    initial = JSON.parse(data);
-  }
-  return initial;
-};
-
-export const saveData = (key: string, content: string) => {
-  window.localStorage.setItem(key, content);
-};
-
 export interface TransactionAction {
   type: TransactionType;
   payload: Transaction | { id: Transaction["id"] };

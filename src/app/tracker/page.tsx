@@ -1,9 +1,13 @@
+"use client";
+
 import TransitionPage from "@/components/transition-page";
-import TrackerApp from "./tracker";
+import dynamic from "next/dynamic";
+
+const TrackerApp = dynamic(() => import("./tracker"), { ssr: false });
 
 function TrackingPage() {
   return (
-    <div className="bg-backgroundPrimary px-3 pb-10">
+    <div className="bg-backgroundPrimary px-3 pb-10 min-h-screen">
       <TransitionPage />
       <TrackerApp />
     </div>
