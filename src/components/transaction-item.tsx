@@ -31,7 +31,9 @@ function TransactionItem({ transaction, dispatch }: Props) {
         >
           {transaction.amount < 0 && "-"}${Math.abs(transaction.amount)}
         </p>
-        <p className="text-primary/80">{transaction.date}</p>
+        <p className="text-primary/80 font-semibold">
+          {transaction.description.slice(0, 20)}...
+        </p>
       </div>
       <button
         onClick={() => handleClick(transaction.id)}
