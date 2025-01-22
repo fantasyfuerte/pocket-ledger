@@ -18,8 +18,8 @@ export default function Home() {
         </Link>
       </section>
       <section id="how-to-use" className="flex flex-col items-center justify-center pt-4 p-3 h-screen gap-7 bg-middleColor">
-        <h4 className="text-primary font-semibold text-xl">How to use</h4>
-        <div className="text-center text-primary/80 flex flex-col gap-3 text-lg">
+        <h4 className="text-primary font-bold text-xl">How to use</h4>
+        <div className="text-center text-primary/80 flex flex-col gap-3 text-lg font-semibold">
           <p>Add your incomes and expenses to track your finances</p>
           <p>
             Incomes should be positive numbers and expenses should be negative
