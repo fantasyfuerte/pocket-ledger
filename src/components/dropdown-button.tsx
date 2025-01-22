@@ -29,7 +29,7 @@ function DropDownButton() {
               </a>
             </li>
             <li>
-              <a href="https://pocket-ledger.vercel.app/tracker/#history" className="block px-4 py-2">
+              <a href="/tracker/#history" className="block px-4 py-2">
                 History
               </a>
             </li>
