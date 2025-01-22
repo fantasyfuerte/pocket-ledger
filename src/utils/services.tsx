@@ -1,3 +1,5 @@
+"use client"
+
 export enum TransactionType {
   ADD = "ADD",
   REMOVE = "REMOVE",
