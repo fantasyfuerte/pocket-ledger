@@ -18,7 +18,7 @@ export default function Home() {
         </Link>
       </section>
       <section className="flex flex-col items-center justify-center p-5 h-[90vh] gap-7 bg-middleColor"></section>
-      <div className="bg-middleColor py-4">
+      <div className="bg-middleColor py-4 px-2">
         <Footer />
       </div>
     </main>

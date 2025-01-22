@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-backgroundSecondary rounded-lg shadow mx-4">
+    <footer className="bg-backgroundSecondary rounded-lg shadow ">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-primary/80 sm:text-center">
           © 2025{" "}

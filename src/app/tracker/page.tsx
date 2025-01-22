@@ -5,7 +5,7 @@ function TrackingPage() {
   return (
     <div className="bg-backgroundPrimary px-3">
       <TransitionPage />
-      <TrackerApp />
+      <TrackerApp />¡
     </div>
   );
 }
