@@ -24,12 +24,12 @@ function DropDownButton() {
             aria-labelledby="dropdownDefaultButton"
           >
             <li>
-              <a href="https://www.pocket-ledger.vercel.app/#how-to-use" className="block px-4 py-2">
+              <a href="https://pocket-ledger.vercel.app/#how-to-use" className="block px-4 py-2">
                 How to use
               </a>
             </li>
             <li>
-              <a href="https://www.pocket-ledger.vercel.app/tracker/#history" className="block px-4 py-2">
+              <a href="https://pocket-ledger.vercel.app/tracker/#history" className="block px-4 py-2">
                 History
               </a>
             </li>
