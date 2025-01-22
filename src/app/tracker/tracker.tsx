@@ -29,7 +29,7 @@ function TrackerApp() {
   }, 0);
 
   return (
-    <section className="flex flex-col gap-3">
+    <section className="flex flex-col gap-3 md:grid grid-cols-3">
       <TransactionForm dispatch={dispatch} />
       <Balance data={{ incomes, expenses }} />
       <PieChart data={{ incomes, expenses }} />

@@ -1,4 +1,5 @@
 import { TransactionAction, TransactionType } from "@/utils/services";
+import { GiVacuumCleaner } from "react-icons/gi";
 
 interface Props {
   dispatch: (action: TransactionAction) => void;
@@ -35,44 +36,41 @@ function TransactionForm({ dispatch }: Props) {
 
   const clearForm = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const inputText = e.currentTarget.form?.elements.namedItem("description");
-    if (inputText instanceof HTMLInputElement) inputText.value = "";
-    const inputNumber = e.currentTarget.form?.elements.namedItem("amount");
-    if (inputNumber instanceof HTMLInputElement) inputNumber.value = "";
+    e.currentTarget.form?.reset();
   };
 
   return (
     <article>
       <form
         onSubmit={handleForm}
-        className="flex flex-col gap-2 bg-middleColor/80 rounded-xl p-4"
+        className="flex flex-col gap-2 bg-backgroundSecondary rounded-xl p-4"
       >
         <input
-          className="p-2 outline-none text-center bg-backgroundSecondary/80 rounded-md text-primary font-semibold placeholder:text-primary/80"
+          className="bg-middleColor/25 text-2xl p-3 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/50"
           type="number"
           name="amount"
-          placeholder="Amount"
+          placeholder="-$35"
           required
         />
         <input
-          className="bg-backgroundSecondary/80 p-2 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/80"
+          className="bg-middleColor/25 p-2 outline-none text-center rounded-md text-primary font-semibold placeholder:text-primary/50"
           type="text"
           name="description"
-          placeholder="Description"
+          placeholder="Booking a flight"
         />
-        <div className="flex gap-2 justify-center">
+        <div className="flex gap-2">
           <button
             type="submit"
-            className="bg-cta w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 self-center"
+            className="bg-cta w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 flex-grow"
           >
-            Add
+            Add Transaction
           </button>
           <button
             type="button"
             onClick={clearForm}
             className="bg-primary w-fit px-4 py-2 rounded-xl text-backgroundPrimary font-semibold active:bg-cta/60 self-center"
           >
-            Clear
+            <GiVacuumCleaner size={24} />
           </button>
         </div>
       </form>
