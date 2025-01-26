@@ -1,10 +1,6 @@
-"use client";
-
 import Footer from "@/components/footer";
 import TransitionPage from "@/components/transition-page";
-import dynamic from "next/dynamic";
-
-const TrackerApp = dynamic(() => import("./tracker"), { ssr: false });
+import TrackerApp from "./tracker";
 
 function TrackingPage() {
   return (
