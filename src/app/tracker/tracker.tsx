@@ -6,7 +6,6 @@ import { reduce } from "@/utils/services";
 import TransactionHistory from "@/components/transaction-history";
 import Balance from "@/components/balance";
 import PieChart from "@/components/pie-chart";
-import Footer from "@/components/footer";
 
 function TrackerApp() {
   const getData = (key: string) => {
@@ -50,7 +49,6 @@ function TrackerApp() {
       <Balance data={{ incomes, expenses }} />
       <PieChart data={{ incomes, expenses }} />
       <TransactionHistory state={state} dispatch={dispatch} />
-      <Footer />
     </section>
   );
 }
