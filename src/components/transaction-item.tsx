@@ -42,7 +42,7 @@ function TransactionItem({ transaction, dispatch }: Props) {
             {detailsVisible
               ? transaction.description
               : transaction.description.slice(0, 20)}
-            {!detailsVisible && "..."}
+            {!detailsVisible && transaction.description.length > 20 && "..."}
           </p>
         </div>
         <button
