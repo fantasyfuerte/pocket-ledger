@@ -7,7 +7,7 @@ function TrackingPage() {
     <div className="bg-backgroundPrimary px-3 min-h-screen">
       <TransitionPage />
       <TrackerApp />
-      <div className="h-[150px] mt-10 flex flex-col justify-end">
+      <div className="flex flex-col justify-end">
         <Footer />
       </div>
     </div>
