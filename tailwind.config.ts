@@ -10,14 +10,14 @@ export default {
     extend: {
       colors: {
         primary: "#352640",
-        backgroundPrimary: "#f1f2ce",
-        backgroundSecondary: "#d1b4a2",
+        backgroundPrimary: "#f0f1dd",
+        backgroundSecondary: "#d2beb1",
         cta: "#92394b",
         middleColor: "#a9767a",
       },
       backgroundImage: {
         "gradient-principal":
-          "linear-gradient(to bottom, #f1f2ce 60%, #a9767a)",
+          "linear-gradient(to bottom, #f0f1dd 60%, #a9767a)",
         "gradient-page": "linear-gradient(to bottom,#a9767a 70%,transparent)",
       },
     },
