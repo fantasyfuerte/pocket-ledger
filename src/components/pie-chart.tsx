@@ -19,18 +19,23 @@ function PieChart({ data }: Props) {
           No data available
         </p>
       ) : (
-        <VictoryPie
-          innerRadius={100}
-          padAngle={5}
-          cornerRadius={15}
-          labels={[]}
-          animate={{ duration: 1000 }}
-          colorScale={["#92394b", "#352640"]}
-          data={[
-            { x: "expenses", y: expenses },
-            { x: "balance", y: balance },
-          ]}
-        />
+        <>
+          <div className="w-[320px] h-[320px] bg-transparent z-20 absolute"></div>
+          <div className="z-10">
+            <VictoryPie
+              innerRadius={100}
+              padAngle={5}
+              cornerRadius={15}
+              labels={[]}
+              animate={{ duration: 1000 }}
+              colorScale={["#92394b", "#352640"]}
+              data={[
+                { x: "expenses", y: expenses },
+                { x: "balance", y: balance },
+              ]}
+            />
+          </div>
+        </>
       )}
     </article>
   );
