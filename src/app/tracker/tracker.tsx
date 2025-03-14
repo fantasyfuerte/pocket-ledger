@@ -6,6 +6,7 @@ import { reduce } from "@/utils/services";
 import TransactionHistory from "@/components/transaction-history";
 import Balance from "@/components/balance";
 import PieChart from "@/components/pie-chart";
+import { GiInfo } from "react-icons/gi";
 
 function TrackerApp() {
   const getData = (key: string) => {
@@ -45,6 +46,13 @@ function TrackerApp() {
 
   return (
     <section className="flex flex-col gap-3 sm:px-20 md:px-44 lg:px-64 xl:px-96">
+      <div className="items-center gap-2 hidden md:flex mb-6 w-fit mx-auto">
+        <GiInfo className="w-8 text-2xl" />
+        <p className="leading-none w-[340px]">
+          Although Pocket Ledger can be used on a dektop, it is designed for the
+          mobile experience.
+        </p>
+      </div>
       <TransactionForm dispatch={dispatch} />
       <Balance data={{ incomes, expenses }} />
       <PieChart data={{ incomes, expenses }} />
