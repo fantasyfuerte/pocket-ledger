@@ -8,10 +8,18 @@ interface Props {
   dispatch: (action: TransactionAction) => void;
 }
 function TransactionHistory({ state, dispatch }: Props) {
-  const [toDown, setToDown] = useState(false);
+
+  const [sortBy, setSortBy] = useState<"date" | "low-price" | "high-price">("date");
 
   const history = state.sort((a, b) => {
-    const sort = toDown ? b.amount - a.amount : a.amount - b.amount;
+    switch (sortBy) {
+      case "date":
+        return b.date.getTime() - a.date.getTime();
+      case "low-price":
+        return b.price - a.price;
+      case "high-price":
+        return a.price - b.price;
+    }
     return sort;
   });
 
